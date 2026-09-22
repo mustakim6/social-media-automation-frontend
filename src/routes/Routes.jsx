@@ -1,5 +1,5 @@
 
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, Navigate } from "react-router-dom";
 
 import LogIn from "../pages/LogIn.jsx";
 import Register from "../pages/Register.jsx";
@@ -23,6 +23,10 @@ const routes = [
     path:"/",
     element: <PublicRoute />,
     children: [
+      {
+    index: true,
+    element: <Navigate to="/login" replace />,
+},
       {
         path: "/login",
         element: <LogIn />,
