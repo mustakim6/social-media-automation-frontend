@@ -38,8 +38,9 @@ const [connecting, setConnecting] = useState(false);
   // --------------------------------------------------
 
   const handleConnectFacebook = () => {
-    window.location.href = "http://localhost:5000/api/facebook/connect";
-  };
+  window.location.href =
+    `${import.meta.env.VITE_API_URL}/facebook/connect`;
+};
 
   // --------------------------------------------------
   // Load already connected Pages

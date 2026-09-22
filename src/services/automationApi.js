@@ -1,4 +1,3 @@
-
 import axios from "axios";
 
 // ==================================================
@@ -6,7 +5,7 @@ import axios from "axios";
 // ==================================================
 
 const API = axios.create({
-    baseURL: "http://localhost:5000/api/automations",
+    baseURL: `${import.meta.env.VITE_API_URL}/automations`,
     withCredentials: true,
 });
 
@@ -16,7 +15,7 @@ const API = axios.create({
 // ==================================================
 
 const CARD_API = axios.create({
-    baseURL: "http://localhost:5000/api/llm",
+    baseURL: `${import.meta.env.VITE_API_URL}/llm`,
     withCredentials: true,
 });
 
@@ -198,4 +197,3 @@ export {
     getExecutionStatuses,
     previewCard,
 };
-

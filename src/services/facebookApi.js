@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const FACEBOOK_API = axios.create({
-    baseURL: "http://localhost:5000/api/facebook",
+    baseURL: `${import.meta.env.VITE_API_URL}/facebook`,
     withCredentials: true,
 });
 
