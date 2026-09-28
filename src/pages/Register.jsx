@@ -102,7 +102,6 @@ const Register = () => {
 
             setInputData(initialValue);
 
-            // Redirect to login
             setTimeout(() => {
                 navigate("/login", {
                     replace: true,
@@ -124,185 +123,160 @@ const Register = () => {
     };
 
     return (
-        <div className="min-h-screen bg-[#F7F1E8] px-4 py-8 sm:px-6">
-            <div className="mx-auto flex min-h-[calc(100vh-4rem)] max-w-6xl items-center justify-center">
-
+        <div className="flex flex-1 items-center bg-slate-950 px-4 py-8 sm:px-6">
+            <div className="mx-auto flex w-full max-w-6xl items-center justify-center">
                 {/* Main Auth Container */}
-                <div className="grid w-full overflow-hidden rounded-3xl border border-[#E8DCCB] bg-[#FFFDF9] shadow-[0_20px_60px_rgba(91,67,48,0.10)] lg:grid-cols-2">
+                <div className="grid w-full overflow-hidden rounded-2xl border border-slate-800 bg-slate-900 shadow-2xl shadow-slate-950/40 lg:grid-cols-2">
 
-                    {/* =================================
-                        Left Brand Section
-                    ================================= */}
+                    {/* Left Brand Section */}
+                    <div className="relative hidden overflow-hidden bg-linear-to-br from-slate-900 via-slate-900 to-slate-950 p-8 lg:flex lg:flex-col lg:justify-between">
 
-                    <div className="relative hidden overflow-hidden bg-[#5F4A3B] p-10 lg:flex lg:flex-col lg:justify-between">
+                        {/* Decorative Glow */}
+                        <div
+                            className="pointer-events-none absolute -left-24 -top-24 h-64 w-64 rounded-full bg-cyan-500/10 blur-3xl"
+                            aria-hidden="true"
+                        />
 
-                        {/* Decorative Elements */}
-                        <div className="absolute -left-24 -top-24 h-64 w-64 rounded-full bg-[#E8B889]/15" />
-
-                        <div className="absolute -bottom-28 -right-20 h-72 w-72 rounded-full bg-[#D99A6C]/15" />
+                        <div
+                            className="pointer-events-none absolute -bottom-28 -right-20 h-72 w-72 rounded-full bg-blue-600/10 blur-3xl"
+                            aria-hidden="true"
+                        />
 
                         <div className="relative z-10">
-
                             {/* Brand */}
                             <div className="flex items-center gap-3">
-
-                                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#E8B889] text-xl font-bold text-[#5F4A3B]">
+                                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-cyan-400 text-lg font-bold text-slate-950">
                                     S
                                 </div>
 
-                                <span className="text-xl font-bold tracking-tight text-[#FFF8EF]">
-                                    SocialFlow
+                                <span className="text-xl font-bold tracking-tight text-white">
+                                    Social
+                                    <span className="text-cyan-400">
+                                        Flow
+                                    </span>
                                 </span>
-
                             </div>
 
-
                             {/* Hero */}
-                            <div className="mt-20 max-w-md">
-
-                                <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#E8B889]">
+                            <div className="mt-12 max-w-md">
+                                <p className="text-sm font-medium uppercase tracking-[0.2em] text-cyan-400">
                                     Get started
                                 </p>
 
-                                <h1 className="mt-4 text-4xl font-bold leading-tight text-[#FFF8EF]">
+                                <h1 className="mt-3 text-3xl font-bold leading-tight text-white">
                                     Build your flow.
                                     <br />
-
-                                    <span className="text-[#E8B889]">
+                                    <span className="text-cyan-400">
                                         Automate the rest.
                                     </span>
                                 </h1>
 
-                                <p className="mt-6 text-sm leading-7 text-[#E8DCCB]">
+                                <p className="mt-5 text-sm leading-6 text-slate-400">
                                     Create your SocialFlow account
                                     and start managing your
                                     Facebook content with a simple,
                                     automated workflow.
                                 </p>
-
                             </div>
-
                         </div>
-
 
                         {/* Bottom Features */}
                         <div className="relative z-10 grid grid-cols-3 gap-3">
-
-                            <div className="rounded-xl border border-white/10 bg-white/5 p-3">
+                            <div className="rounded-xl border border-slate-700/70 bg-white/5 p-3">
                                 <p className="text-lg">
                                     📘
                                 </p>
 
-                                <p className="mt-2 text-xs text-[#E8DCCB]">
+                                <p className="mt-2 text-xs text-slate-400">
                                     Pages
                                 </p>
                             </div>
 
-
-                            <div className="rounded-xl border border-white/10 bg-white/5 p-3">
+                            <div className="rounded-xl border border-slate-700/70 bg-white/5 p-3">
                                 <p className="text-lg">
                                     🤖
                                 </p>
 
-                                <p className="mt-2 text-xs text-[#E8DCCB]">
+                                <p className="mt-2 text-xs text-slate-400">
                                     AI
                                 </p>
                             </div>
 
-
-                            <div className="rounded-xl border border-white/10 bg-white/5 p-3">
+                            <div className="rounded-xl border border-slate-700/70 bg-white/5 p-3">
                                 <p className="text-lg">
                                     ⏰
                                 </p>
 
-                                <p className="mt-2 text-xs text-[#E8DCCB]">
+                                <p className="mt-2 text-xs text-slate-400">
                                     Schedule
                                 </p>
                             </div>
-
                         </div>
-
                     </div>
 
-
-                    {/* =================================
-                        Register Form
-                    ================================= */}
-
-                    <div className="flex items-center p-6 sm:p-10 lg:p-12">
-
+                    {/* Register Form */}
+                    <div className="flex items-center p-6 sm:p-8 lg:p-10">
                         <div className="mx-auto w-full max-w-md">
 
                             {/* Mobile Logo */}
-                            <div className="mb-8 flex items-center gap-3 lg:hidden">
-
-                                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#5F4A3B] text-lg font-bold text-[#E8B889]">
+                            <div className="mb-6 flex items-center gap-3 lg:hidden">
+                                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-cyan-400 text-lg font-bold text-slate-950">
                                     S
                                 </div>
 
-                                <span className="text-xl font-bold text-[#5F4A3B]">
-                                    SocialFlow
+                                <span className="text-xl font-bold text-white">
+                                    Social
+                                    <span className="text-cyan-400">
+                                        Flow
+                                    </span>
                                 </span>
-
                             </div>
-
 
                             {/* Heading */}
                             <div>
-
-                                <p className="text-sm font-medium text-[#B8754F]">
+                                <p className="text-sm font-medium text-cyan-400">
                                     Start your journey ✨
                                 </p>
 
-                                <h2 className="mt-2 text-3xl font-bold tracking-tight text-[#3F3026]">
+                                <h2 className="mt-2 text-2xl font-bold tracking-tight text-white sm:text-3xl">
                                     Create your account
                                 </h2>
 
-                                <p className="mt-3 text-sm leading-6 text-[#806F61]">
+                                <p className="mt-2 text-sm leading-6 text-slate-400">
                                     Set up your SocialFlow account
                                     and start automating your
                                     social media workflow.
                                 </p>
-
                             </div>
 
-
-                            {/* Error Message */}
+                            {/* Error */}
                             {error && (
-                                <div className="mt-6 rounded-xl border border-[#E8B4A0] bg-[#FFF1EC] px-4 py-3">
-
-                                    <p className="text-sm leading-5 text-[#A34F35]">
+                                <div className="mt-5 rounded-xl border border-red-400/20 bg-red-400/10 px-4 py-3">
+                                    <p className="text-sm leading-5 text-red-300">
                                         {error}
                                     </p>
-
                                 </div>
                             )}
 
-
-                            {/* Success Message */}
+                            {/* Success */}
                             {success && (
-                                <div className="mt-6 rounded-xl border border-green-200 bg-green-50 px-4 py-3">
-
-                                    <p className="text-sm leading-5 text-green-700">
+                                <div className="mt-5 rounded-xl border border-emerald-400/20 bg-emerald-400/10 px-4 py-3">
+                                    <p className="text-sm leading-5 text-emerald-300">
                                         {success}
                                     </p>
-
                                 </div>
                             )}
-
 
                             {/* Registration Form */}
                             <form
                                 onSubmit={handleRegister}
-                                className="mt-8 space-y-4"
+                                className="mt-6 space-y-4"
                             >
-
-                                {/* ================= Name ================= */}
+                                {/* Name */}
                                 <div>
-
                                     <label
                                         htmlFor="name"
-                                        className="mb-2 block text-sm font-medium text-[#4F4035]"
+                                        className="mb-2 block text-sm font-medium text-slate-300"
                                     >
                                         Full name
                                     </label>
@@ -311,23 +285,24 @@ const Register = () => {
                                         id="name"
                                         type="text"
                                         name="name"
-                                        value={inputData.name}
-                                        onChange={handleChange}
-                                        placeholder="Mustakim"
+                                        value={
+                                            inputData.name
+                                        }
+                                        onChange={
+                                            handleChange
+                                        }
+                                        placeholder="Write your name here.."
                                         autoComplete="name"
                                         disabled={loading}
-                                        className="w-full rounded-xl border border-[#E3D6C8] bg-[#FFFCF7] px-4 py-3 text-sm text-[#3F3026] outline-none transition placeholder:text-[#A99A8C] focus:border-[#B8754F] focus:ring-4 focus:ring-[#B8754F]/10 disabled:cursor-not-allowed disabled:opacity-60"
+                                        className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-cyan-400 focus:ring-4 focus:ring-cyan-400/10 disabled:cursor-not-allowed disabled:opacity-60"
                                     />
-
                                 </div>
 
-
-                                {/* ================= Email ================= */}
+                                {/* Email */}
                                 <div>
-
                                     <label
                                         htmlFor="email"
-                                        className="mb-2 block text-sm font-medium text-[#4F4035]"
+                                        className="mb-2 block text-sm font-medium text-slate-300"
                                     >
                                         Email address
                                     </label>
@@ -336,29 +311,29 @@ const Register = () => {
                                         id="email"
                                         type="email"
                                         name="email"
-                                        value={inputData.email}
-                                        onChange={handleChange}
+                                        value={
+                                            inputData.email
+                                        }
+                                        onChange={
+                                            handleChange
+                                        }
                                         placeholder="you@example.com"
                                         autoComplete="email"
                                         disabled={loading}
-                                        className="w-full rounded-xl border border-[#E3D6C8] bg-[#FFFCF7] px-4 py-3 text-sm text-[#3F3026] outline-none transition placeholder:text-[#A99A8C] focus:border-[#B8754F] focus:ring-4 focus:ring-[#B8754F]/10 disabled:cursor-not-allowed disabled:opacity-60"
+                                        className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-cyan-400 focus:ring-4 focus:ring-cyan-400/10 disabled:cursor-not-allowed disabled:opacity-60"
                                     />
-
                                 </div>
 
-
-                                {/* ================= Password ================= */}
+                                {/* Password */}
                                 <div>
-
                                     <label
                                         htmlFor="password"
-                                        className="mb-2 block text-sm font-medium text-[#4F4035]"
+                                        className="mb-2 block text-sm font-medium text-slate-300"
                                     >
                                         Password
                                     </label>
 
                                     <div className="relative">
-
                                         <input
                                             id="password"
                                             type={
@@ -367,46 +342,46 @@ const Register = () => {
                                                     : "password"
                                             }
                                             name="password"
-                                            value={inputData.password}
-                                            onChange={handleChange}
+                                            value={
+                                                inputData.password
+                                            }
+                                            onChange={
+                                                handleChange
+                                            }
                                             placeholder="Create a password"
                                             autoComplete="new-password"
                                             disabled={loading}
-                                            className="w-full rounded-xl border border-[#E3D6C8] bg-[#FFFCF7] px-4 py-3 pr-20 text-sm text-[#3F3026] outline-none transition placeholder:text-[#A99A8C] focus:border-[#B8754F] focus:ring-4 focus:ring-[#B8754F]/10 disabled:cursor-not-allowed disabled:opacity-60"
+                                            className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 pr-20 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-cyan-400 focus:ring-4 focus:ring-cyan-400/10 disabled:cursor-not-allowed disabled:opacity-60"
                                         />
 
                                         <button
                                             type="button"
                                             onClick={() =>
                                                 setShowPassword(
-                                                    (prev) => !prev
+                                                    (prev) =>
+                                                        !prev
                                                 )
                                             }
                                             disabled={loading}
-                                            className="absolute right-3 top-1/2 -translate-y-1/2 rounded-lg px-2 py-1 text-xs font-medium text-[#806F61] transition hover:bg-[#F4EADF] hover:text-[#5F4A3B] disabled:opacity-50"
+                                            className="absolute right-3 top-1/2 -translate-y-1/2 rounded-lg px-2 py-1 text-xs font-medium text-slate-500 transition hover:bg-slate-800 hover:text-cyan-400 disabled:opacity-50"
                                         >
                                             {showPassword
                                                 ? "Hide"
                                                 : "Show"}
                                         </button>
-
                                     </div>
-
                                 </div>
 
-
-                                {/* ================= Confirm Password ================= */}
+                                {/* Confirm Password */}
                                 <div>
-
                                     <label
                                         htmlFor="confirmPassword"
-                                        className="mb-2 block text-sm font-medium text-[#4F4035]"
+                                        className="mb-2 block text-sm font-medium text-slate-300"
                                     >
                                         Confirm password
                                     </label>
 
                                     <div className="relative">
-
                                         <input
                                             id="confirmPassword"
                                             type={
@@ -418,67 +393,58 @@ const Register = () => {
                                             value={
                                                 inputData.confirmPassword
                                             }
-                                            onChange={handleChange}
+                                            onChange={
+                                                handleChange
+                                            }
                                             placeholder="Confirm your password"
                                             autoComplete="new-password"
                                             disabled={loading}
-                                            className="w-full rounded-xl border border-[#E3D6C8] bg-[#FFFCF7] px-4 py-3 pr-20 text-sm text-[#3F3026] outline-none transition placeholder:text-[#A99A8C] focus:border-[#B8754F] focus:ring-4 focus:ring-[#B8754F]/10 disabled:cursor-not-allowed disabled:opacity-60"
+                                            className="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 pr-20 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-cyan-400 focus:ring-4 focus:ring-cyan-400/10 disabled:cursor-not-allowed disabled:opacity-60"
                                         />
 
                                         <button
                                             type="button"
                                             onClick={() =>
                                                 setShowConfirmPassword(
-                                                    (prev) => !prev
+                                                    (prev) =>
+                                                        !prev
                                                 )
                                             }
                                             disabled={loading}
-                                            className="absolute right-3 top-1/2 -translate-y-1/2 rounded-lg px-2 py-1 text-xs font-medium text-[#806F61] transition hover:bg-[#F4EADF] hover:text-[#5F4A3B] disabled:opacity-50"
+                                            className="absolute right-3 top-1/2 -translate-y-1/2 rounded-lg px-2 py-1 text-xs font-medium text-slate-500 transition hover:bg-slate-800 hover:text-cyan-400 disabled:opacity-50"
                                         >
                                             {showConfirmPassword
                                                 ? "Hide"
                                                 : "Show"}
                                         </button>
-
                                     </div>
-
                                 </div>
 
-
-                                {/* ================= Submit ================= */}
+                                {/* Submit */}
                                 <button
                                     type="submit"
                                     disabled={loading}
-                                    className="mt-2 w-full rounded-xl bg-[#5F4A3B] px-5 py-3.5 text-sm font-semibold text-[#FFF8EF] shadow-sm transition hover:bg-[#4F3D31] focus:outline-none focus:ring-4 focus:ring-[#5F4A3B]/15 disabled:cursor-not-allowed disabled:opacity-60"
+                                    className="mt-1 w-full rounded-xl bg-cyan-400 px-5 py-3 text-sm font-semibold text-slate-950 shadow-lg shadow-cyan-500/10 transition hover:bg-cyan-300 hover:shadow-cyan-400/20 focus:outline-none focus:ring-4 focus:ring-cyan-400/20 disabled:cursor-not-allowed disabled:opacity-60"
                                 >
                                     {loading
                                         ? "Creating account..."
                                         : "Create account"}
                                 </button>
-
                             </form>
 
-
                             {/* Login Link */}
-                            <p className="mt-7 text-center text-sm text-[#806F61]">
-
+                            <p className="mt-5 text-center text-sm text-slate-500">
                                 Already have an account?{" "}
-
                                 <Link
                                     to="/login"
-                                    className="font-semibold text-[#B8754F] transition hover:text-[#8F563A]"
+                                    className="font-semibold text-cyan-400 transition hover:text-cyan-300"
                                 >
                                     Sign in
                                 </Link>
-
                             </p>
-
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
         </div>
     );
