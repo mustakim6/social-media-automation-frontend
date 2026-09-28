@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const PublicNavbar = () => {
     return (
-        <header className="sticky top-0 z-50 border-b border-slate-800/80 bg-slate-950/95 text-white shadow-lg shadow-slate-950/20 backdrop-blur-md">
+        <header className="sticky top-0 z-50  border-slate-800/80 bg-slate-950/95 text-white shadow-lg shadow-slate-950/20 backdrop-blur-md">
             <nav className="mx-auto flex h-18 max-w-7xl items-center justify-between px-6">
                 
                 {/* Brand */}
