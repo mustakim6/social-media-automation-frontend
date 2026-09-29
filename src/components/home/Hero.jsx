@@ -95,29 +95,3 @@ export default Hero;
 
 
 
-/**
- * src/
-├── components/
-│   ├── PublicLayout.jsx
-│   ├── Footer.jsx
-│   └── home/
-│       ├── Navbar.jsx
-│       ├── Hero.jsx
-│       ├── HowItWorks.jsx
-│       ├── ContentTypes.jsx
-│       ├── AIProviders.jsx
-│       ├── Features.jsx
-│       └── FinalCTA.jsx
-│
-├── pages/
-│   ├── Home.jsx
-│   ├── Login.jsx
-│   ├── Register.jsx
-│   ├── PrivacyPolicy.jsx
-│   └── DataDeletion.jsx
-│
-└── router/
-    └── router.jsx
- * 
- * 
- * **/ 
